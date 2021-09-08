@@ -42,6 +42,7 @@ struct transition
     transition_callback worker;
 };
 
+// transition-specific actions
 void _fxn(enum states state, enum sym signal){
     return;
 };
