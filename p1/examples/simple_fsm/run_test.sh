@@ -1,2 +1,2 @@
-gcc fsm.c -o fsm
-./fsm < tests/test.txt
+gcc dfa.c -o dfa
+./dfa < tests/test.txt
