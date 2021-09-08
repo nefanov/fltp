@@ -72,13 +72,12 @@ void test_string(const char *s)
     enum states current_state = q0;
     unsigned pos = 0;
     while (1)
-    {
-        
+    {   
         enum sym current_sym = getSym(s, pos);
-        pos++;
         enum states new_state = FSM_table[current_state][current_sym].new_state;
         transition_callback worker = FSM_table[current_state][current_sym].worker;
-        printf("Current = %d, sym = %d, new = %d\n", current_state, current_sym, new_state);
+        printf("Current = %d, sym = %c, new = %d\n", current_state, s[pos], new_state);
+        pos++;
         if (worker != NULL)
         {
             worker(current_state, current_sym);
@@ -94,4 +93,3 @@ int main()
     test_string(test_buf);
     return 0;
 }
-
