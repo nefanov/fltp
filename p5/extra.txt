@@ -1,1 +1,1 @@
-1. C++ Boost Spirit QI -- парсер по грамматике в РБНФ, очень удобно http://kiri11.ru/boost_spirit_qi_part1/
+1. C++ Boost Spirit QI -- LL-парсер по грамматике в РБНФ, очень удобно http://kiri11.ru/boost_spirit_qi_part1/
