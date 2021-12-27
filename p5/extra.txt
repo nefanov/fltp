@@ -1,1 +1,7 @@
-1. C++ Boost Spirit QI -- LL-парсер по грамматике в РБНФ, очень удобно, если нет левой рекурсии http://kiri11.ru/boost_spirit_qi_part1/
+1. C++ Boost Spirit QI -- LL-парсер по грамматике в РБНФ, очень удобно, если нет левой рекурсии (явной или неявной):
+
+http://kiri11.ru/boost_spirit_qi_part1/
+
+Возможные подводные камни и борьба с ними:
+
+https://www.boost.org/doc/libs/1_77_0/libs/spirit/classic/doc/faq.html
