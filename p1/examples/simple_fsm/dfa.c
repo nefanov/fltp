@@ -43,16 +43,19 @@ struct transition
 };
 
 // transition-specific actions
-void _fxn(enum states state, enum sym signal){
+void _fxn(enum states state, enum sym signal)
+{
     return;
 };
 
-void print_acc(enum states state, enum sym signal) {
+void print_acc(enum states state, enum sym signal)
+{
     printf("Sequence is accepted, current state is %d\n", state);
     exit(0);
 };
 
-void print_no_acc(enum states state, enum sym signal) {
+void print_no_acc(enum states state, enum sym signal)
+{
     printf("Sequence is not accepted, current state is %d\n", state);
     exit(0);
 };
