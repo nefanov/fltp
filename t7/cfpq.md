@@ -1,5 +1,5 @@
 Let Σ be a finite set of edge labels. Define an edge-labeled directed graph as a tuple D = (V,E) with a set of nodes V and a directed edge relation E ⊆ V × Σ × V.
-A path π is a list of labeled edges [e1,...,en] wheree i ∈ E. The concatenation of a path π1 with a path π2 we denote by π1 + π2.
+A path π is a list of labeled edges [e_1,...,e_n] where e_i ∈ E. The concatenation of a path π1 with a path π2 we denote by π1 + π2.
 For a path π in a graph D, we denote the unique word, obtained by concatenating the labels of the edges along the path π as l(π). Also, we write nπm to indicate, that the path π starts at the node n ∈ V and ends at the node m ∈ V.
 A context-free grammar is a triple G = (N , Σ, P ), where N is a finite set of non-terminals, Σ is a finite set of terminals, and P is a finite set of productions of the following forms:
 • A → BC,forA,B,C ∈N,
