@@ -25,20 +25,10 @@
 
 Если возвращаеммое значение этой функции — пара вида (true, []), то разбор завершился успехом.
 
-Пример (на Python): для строк a^nb^m, n,m > 0
+Пример (на Python): для строк
 
 ```
-def RD(w):
-    if len(w)==0:
-        return (true,w)
-    if (w.startswith("a")):
-        res = RD(w.lstrip("a"))
-        if res[0] and res[1].startswith("b"):
-            return RD(res[1].lstrip("b"))
-        else:
-            return (false, res[1])
-    else:
-        return (false, w)
+
 ```
 
 
