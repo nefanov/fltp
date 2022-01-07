@@ -5,3 +5,5 @@ http://kiri11.ru/boost_spirit_qi_part1/
 Возможные подводные камни и борьба с ними:
 
 https://www.boost.org/doc/libs/1_77_0/libs/spirit/classic/doc/faq.html
+
+2. recursive descent https://rockie-yang.gitbooks.io/python-cookbook/content/ch2/simple_parser.html
