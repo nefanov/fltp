@@ -9,3 +9,5 @@ https://www.boost.org/doc/libs/1_77_0/libs/spirit/classic/doc/faq.html
 2. recursive descent https://rockie-yang.gitbooks.io/python-cookbook/content/ch2/simple_parser.html
 
 3. http://gokcehan.github.io/notes/recursive-descent-parsing.html
+
+4. Прекрасный пошаговый визуализатор LL(1) анализа: https://www.cs.princeton.edu/courses/archive/spring20/cos320/LL1/
