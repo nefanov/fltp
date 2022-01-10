@@ -2,7 +2,7 @@
 
 import re
 
-def cal_follow(s, productions, first):
+def get_follow(s, productions, first):
     follow = set()
     if len(s)!=1 :
         return {}
@@ -18,7 +18,7 @@ def cal_follow(s, productions, first):
                     if(productions[i][j][idx] == i):
                         break
                     else:
-                        f = cal_follow(i, productions, first)
+                        f = get_follow(i, productions, first)
                         for x in f:
                             follow.add(x)
                 else:
@@ -28,7 +28,7 @@ def cal_follow(s, productions, first):
                             follow.add(productions[i][j][idx])
                             break
                         else:
-                            f = cal_first(productions[i][j][idx], productions)
+                            f = get_first(productions[i][j][idx], productions)
                             
                             if('ε' not in f):
                                 for x in f:
@@ -44,13 +44,13 @@ def cal_follow(s, productions, first):
                                 for k in f:
                                     follow.add(k)
                                 
-                                f = cal_follow(i, productions, first)
+                                f = get_follow(i, productions, first)
                                 for x in f:
                                     follow.add(x)
                             
     return follow
    
-def cal_first(s, productions):
+def get_first(s, productions):
     
     first = set()
     
@@ -61,7 +61,7 @@ def cal_first(s, productions):
             c = productions[s][i][j]
             
             if(c.isupper()):
-                f = cal_first(c, productions)
+                f = get_first(c, productions)
                 if('ε' not in f):
                     for k in f:
                         first.add(k)
@@ -111,7 +111,7 @@ def main(test_gram):
         productions[left_prod] = right_prod
     
     for s in productions.keys():
-        first[s] = cal_first(s, productions)
+        first[s] = get_first(s, productions)
     
     print("*****FIRST*****")
     for lhs, rhs in first.items():
@@ -123,7 +123,7 @@ def main(test_gram):
         follow[lhs] = set()
     
     for s in productions.keys():
-        follow[s] = cal_follow(s, productions, first)
+        follow[s] = get_follow(s, productions, first)
     
     print("*****FOLLOW*****")
     for lhs, rhs in follow.items():
