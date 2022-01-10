@@ -1,0 +1,5 @@
+S -> AB
+A -> Ca | ε
+B -> cX
+X -> aACX | ε
+C -> b | ε
