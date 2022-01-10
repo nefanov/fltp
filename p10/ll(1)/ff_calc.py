@@ -130,6 +130,7 @@ def main(test_gram):
         print(lhs, ":" , rhs)
     
     grammar.close()
+    return (first, follow)
 
 if __name__ == "__main__":
     main(test_gram=sys.argv[1]) if len(sys.argv)>1 else main(test_gram="test_grammar.py")
