@@ -1,6 +1,7 @@
 # Inspired by: https://github.com/tdishant/First-and-Follow
 
 import re
+import sys
 
 def get_follow(s, productions, first):
     follow = set()
