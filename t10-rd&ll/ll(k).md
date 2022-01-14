@@ -46,9 +46,11 @@ S -> Aa | Ac
 A -> b
 
 FIRST(S) = FIRST(Aa) U FIRST(Ac) = { b }
+
 FIRST(A) = {b}
 
 FOLLOW[S] == {$}
+
 FOLLOW[A] == {a,c}
 
 
