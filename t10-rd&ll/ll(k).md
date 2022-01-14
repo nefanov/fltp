@@ -18,6 +18,15 @@ FOLLOW_k можно вычислить, используя следующие п
 
 Пример для k=1:
 
+S -> Aa | Ac
+A -> b
+
+FIRST(S) = FIRST(Aa) U FIRST(Ac) = { b }
+FIRST(A) = {b}
+
+FOLLOW[S] == {$}
+FOLLOW[A] == {a,c}
+
 
 
 
