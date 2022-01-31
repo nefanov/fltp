@@ -13,12 +13,14 @@ def check_input_correctness():
     else:
         return
 
+    
 def load_nfa():
     check_input_correctness()
     global nfa
     with open(sys.argv[1], 'r') as inpjson:
         nfa = json.loads(inpjson.read())
 
+        
 def out_dfa():
     check_input_correctness()
     global dfa
