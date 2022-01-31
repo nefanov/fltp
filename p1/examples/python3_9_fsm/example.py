@@ -1,5 +1,5 @@
 # perform "pip install transitions", then:
-# Original: https://habr.com/ru/post/521946/
+# Original: https://github.com/pytransitions/transitions
 from transitions import Machine
 
 # На этот объект будем вешать состояния
