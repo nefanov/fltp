@@ -22,12 +22,7 @@ if __name__ == "__main__":
 
     dfa['states'] = []
     for states in dfa_states:
-        temp = []
-        for state in states:
-            temp.append(state)
-        dfa['states'].append(temp)
-
-    for states in dfa_states:
+        dfa['states'].append(states[:])
         for letter in nfa['letters']:
             q_to = []
             for state in states:
