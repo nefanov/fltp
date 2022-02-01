@@ -12,6 +12,7 @@ if __name__ == "__main__":
     load_nfa()
     
     dfa['states'] = []
+    print(nfa['letters'])
     dfa['letters'] = nfa['letters'] # \Sigma are equal
     dfa['transition_function'] = []
     
