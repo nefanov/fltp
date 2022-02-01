@@ -1,4 +1,4 @@
-from faio import *
+import faio
 
 def get_power_set(nfa_states):
     powerset = [[]]
@@ -9,13 +9,13 @@ def get_power_set(nfa_states):
   
   
 if __name__ == "__main__":
-    load_nfa()
-    
+    nfa = faio.load_nfa()
+    dfa = {}
     dfa['states'] = []
-    print(nfa['letters'])
     dfa['letters'] = nfa['letters'] # \Sigma are equal
     dfa['transition_function'] = []
     
+    nfa_states = []
     for state in nfa['states']:
         nfa_states.append(state) # Q_0 DFA == Q NFA
 
@@ -32,7 +32,7 @@ if __name__ == "__main__":
                     inp = val[1]
                     dst = val[2]
                     if state == src and letter == inp:
-                        if end not in q_to:
+                        if dst not in q_to:
                             q_to.append(dst)
             q_states = []
             for i in states:
@@ -48,4 +48,4 @@ if __name__ == "__main__":
             if state in nfa['final_states'] and states not in dfa['final_states']:
                 dfa['final_states'].append(states)
     
-    out_dfa()
+    faio.out_dfa(dfa)
