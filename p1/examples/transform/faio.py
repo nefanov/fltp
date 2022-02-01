@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 
 dfa = {}
 nfa = {}
@@ -19,10 +20,14 @@ def load_nfa():
     global nfa
     with open(sys.argv[1], 'r') as inpjson:
         nfa = json.loads(inpjson.read())
+        return nfa
 
         
-def out_dfa():
+def out_dfa(dfa):
     check_input_correctness()
-    global dfa
     with open(sys.argv[2], 'w') as outjson:
         outjson.write(json.dumps(dfa, indent = 4))
+
+if __name__ == '__main__':
+    raw=open(os.getcwd() + os.sep + sys.argv[1]).read()
+    print(json.loads(raw))
