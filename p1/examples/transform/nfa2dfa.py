@@ -19,7 +19,7 @@ if __name__ == "__main__":
     for state in nfa['states']:
         nfa_states.append(state) # Q_0 DFA == Q NFA
 
-    dfa_states = get_power_set(nfa_states) # set of sets of the states
+    dfa_states = get_power_set(nfa_states)[1:] # set of sets of the states\emptyset
 
     dfa['states'] = []
     for states in dfa_states:
