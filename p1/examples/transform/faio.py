@@ -7,7 +7,7 @@ nfa_states = []
 dfa_states = []
 
 def check_input_correctness():
-    if sys.argv<=2:
+    if len(sys.argv) <= 2:
         print("Input is incorrect")
         sys.exit(1)
     else:
