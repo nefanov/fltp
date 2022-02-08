@@ -182,4 +182,4 @@ if __name__ == "__main__":
     dfa=faio.load_dfa()
     remove_unreachable_states()
     minimiseDFA()
-    faio.out_dfa()
+    faio.out_dfa(dfa)
