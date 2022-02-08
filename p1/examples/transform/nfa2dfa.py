@@ -47,18 +47,5 @@ if __name__ == "__main__":
             if state in nfa['final_states'] and states not in dfa['final_states']:
                 dfa['final_states'].append(states)
     
-    # finalize labels as strings:
-    for i, item in enumerate(dfa['states']):
-        dfa['states'][i] = "_".join(item)
-
-    for i, item in enumerate(dfa['start_states']):
-        dfa['start_states'][i] = "_".join(item)
-
-    for i, item in enumerate(dfa['final_states']):
-        dfa['final_states'][i] = "_".join(item)
-    
-    for i, item in enumerate(dfa['transition_function']):
-        dfa['transition_function'][i][0] = "_".join(item[0])
-        dfa['transition_function'][i][2] = "_".join(item[2])
     faio.out_dfa(dfa)
     
