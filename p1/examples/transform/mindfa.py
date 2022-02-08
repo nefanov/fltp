@@ -179,7 +179,7 @@ def minimiseDFA():
 
 
 if __name__ == "__main__":
-    faio.load_dfa()
+    dfa=faio.load_dfa()
     remove_unreachable_states()
     minimiseDFA()
     faio.out_dfa()
