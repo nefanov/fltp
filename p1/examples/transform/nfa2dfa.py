@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     for i, item in enumerate(dfa['final_states']):
         dfa['final_states'][i] = "_".join(item)
-    print(dfa['transition_function'])
+    
     for i, item in enumerate(dfa['transition_function']):
         dfa['transition_function'][i][0] = "_".join(item[0])
         dfa['transition_function'][i][2] = "_".join(item[2])
