@@ -74,9 +74,6 @@ def remove_unreachable_states():
 
     dfa['transition_function'] = temp
 
-def order_tuple(a,b):
-	return (a,b) if a < b else (b,a)
-
 def get_to_state(start, inp):
     global dfa
     for val in dfa['transition_function']:
