@@ -12,5 +12,5 @@ if "-h" in sys.argv:
 
 if (sys.argv) > 2:
   inp = sys.argv[1]
-  outp = sys.argv[1]
+  outp = sys.argv[2]
 subprocess.check_call(['flex', '-o', outp, inp])
