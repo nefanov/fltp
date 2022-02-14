@@ -3,7 +3,7 @@
 #include <iostream>
 #include "lexer.hh"
 
-#include <commands.h>
+#include "tokens.h"
 
 
 int main() {
