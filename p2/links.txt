@@ -1,2 +1,5 @@
 1) Flex how to example:
 https://ps-group.github.io/compilers/gnu_flex_doc
+
+2) Flex simple examples:
+https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/
