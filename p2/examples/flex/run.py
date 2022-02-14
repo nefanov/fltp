@@ -15,3 +15,4 @@ if len(sys.argv) > 2:
   outp = sys.argv[2]
 subprocess.check_call(['flex', '-o', outp, inp])
 subprocess.check_call(['gcc', '-o', outp+".out", outp])
+subprocess.check_call(['./'+outp+".out"])
