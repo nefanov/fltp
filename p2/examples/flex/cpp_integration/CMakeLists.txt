@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.4)
 project(LexerUsage)
 
 find_package(FLEX REQUIRED)
