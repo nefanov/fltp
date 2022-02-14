@@ -19,8 +19,9 @@ end     return 0;
 int yywrap(){}
 
 int main() {
-    yy_scan_buffer("a test string \n end");
+    char *str = "a test string \n end";
+    yy_scan_bytes(str, strlen(str));
     yylex();
-    printf("%d %d\n", no_of_lines, no_of_chars);
+    printf("num of lines: %d, num of chars: %d\n", no_of_lines, no_of_chars);
     return 0;
 }
