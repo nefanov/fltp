@@ -10,7 +10,7 @@ if "-h" in sys.argv:
   print("usage: python3 run.py inp_file outp_file")
   sys.exit(0)
 
-if (sys.argv) > 2:
+if len(sys.argv) > 2:
   inp = sys.argv[1]
   outp = sys.argv[2]
 subprocess.check_call(['flex', '-o', outp, inp])
