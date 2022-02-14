@@ -39,8 +39,7 @@ int main(){
 // yyin = fp;
   
 yylex();
-printf("\nNumber of Capital letters " 
-      "in the given input - %d\n", count);
+printf("\nNumber of Capital letters in the given input: %d\n", count);
   
 return 0;
 }
