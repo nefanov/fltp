@@ -1,6 +1,4 @@
-Домашка-1: контест  строки и конечные автоматы:
-
-http://judge2.vdi.mipt.ru/cgi-bin/new-register?contest_id=220221
+Домашка-1: контест "строки и конечные автоматы": http://judge2.vdi.mipt.ru/cgi-bin/new-register?contest_id=220221
 
 Домашка-2: написать построение Томпсона regexp --> NFA, вывод NFA -- в json формате, используемом на семинарах (p1/examples/transform)
 
