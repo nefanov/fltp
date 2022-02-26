@@ -1,5 +1,7 @@
 
-# CFG2ChG (implemented by: Elina Shamber, Alexey Scherbakov et al.)
+# CFG2ChG 
+
+(implemented by: Elina Shamber, Alexey Scherbakov et al.)
 
 The program converts context-free grammar to Chomsky normal form.  
 The letters are numerated from 1 to let_quantity, where let_quantity - quantity of letters, epsilon = 0.  
