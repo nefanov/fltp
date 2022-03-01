@@ -81,7 +81,7 @@ def CYK(inp="", G = None, log=True):
                 for lhr in first_non_term_set:
                     for rhr in second_non_term_set:
                         try:
-                            M[j-k][j] += search_lhs_non_terminal_rule(lhr, rhr)
+                            M[j-k][j] = list(set(M[j-k][j] + search_lhs_non_terminal_rule(lhr, rhr)))
                         except TypeError:
                             M[j - k][j] = search_lhs_non_terminal_rule(lhr, rhr)
 
