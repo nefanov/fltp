@@ -14,7 +14,7 @@ def search_lhs_non_terminal_rule(first, second):
     res = []
     for k,v in G.items():
         for item in v:
-            if [first,second]==item:
+            if [first,second] == item:
                 res.append(k)
                 print("==rule found:", first, second,"<-",k)
     return res
@@ -60,14 +60,14 @@ def CYK_graph(M, G = None, log=True):
 
     n = len(M)
     # динамика для 2 шага и далее:
-    while not matrCmp(M1,M):
+    while not matrCmp(M1, M):
         M1 = copy.deepcopy(M)
-        for k in range(n-1):
+        for k in range(n):
             for i in range(n):
                 for j in range(n):
                     first_non_term_set = M[i][k]
-                    second_non_term_set = M[k+1][j]
-                    
+                    second_non_term_set = M[k][j]
+
                     for lhr in first_non_term_set:
                         for rhr in second_non_term_set:
                             ntr = search_lhs_non_terminal_rule(lhr, rhr)
@@ -84,18 +84,24 @@ def CYK_graph(M, G = None, log=True):
 
 
 if __name__ == '__main__':
-    graph = [
-            ['a', '0', '0', '0'],
-            ['0', 'd', '0', '0'],
-            ['0', '0', 'd', '0'],
-            ['0', '0', '0', 'c']
+    print("==========Test 1===========")
+    graph1 = [
+        ['0', 'a', '0', '0', '0'],
+        ['0', '0', 'd', '0', '0'],
+        ['0', '0', '0', 'd', '0'],
+        ['0', '0', '0', '0', 'c'],
+        ['0', '0', '0', '0', '0'],
     ]
-    CYK_graph(graph, G)
 
+    CYK_graph(graph1, G)
+    print("==========Test 2===========")
     graph2 = [
-        ['a', '0', '0', '0'],
-        ['0', 'd', '0', '0'],
-        ['0', '0', 'd', '0'],
-        ['0', '0', 'c', 'c']
+        ['0', 'a', '0', '0', '0'],
+        ['0', '0', 'd', '0', '0'],
+        ['0', '0', '0', 'd', '0'],
+        ['0', '0', '0', 'c', 'c'],
+        ['0', '0', '0', '0', '0']
     ]
+
     CYK_graph(graph2, G)
+    
