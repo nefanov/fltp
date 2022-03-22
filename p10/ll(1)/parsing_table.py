@@ -2,6 +2,7 @@
 
 import re
 import sys
+import pandas as pd
 
 from ff_calc import get_first, get_follow
 
