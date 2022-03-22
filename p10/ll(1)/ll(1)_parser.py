@@ -107,3 +107,13 @@ def preprocess(test_gram): # making parsing_table
 def parse(test_gram, string):
     start, pt = preprocess(test_gram)
     print(analyze(string, start, pt))
+
+    
+if __name__ == "__main__":
+    inp_g = "test_gram.txt"
+    inp_s = ""
+    if len(sys.argv) > 2:
+        inp_g, inp_s = sys.argv[1], sys.argv[2]
+    elif len(sys.argv) > 1:
+        inp_g = sys.argv[1]
+    parse(test_gram=inp_g, string=inp_s)
