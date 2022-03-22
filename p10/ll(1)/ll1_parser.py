@@ -27,7 +27,7 @@ def parse(user_input, start_symbol, parsingTable):
             print(key)
 
             if key not in parsingTable:
-                acceptability_flag = 1
+                acc_flag = 1
                 break
 
             value = parsingTable[key]
@@ -42,7 +42,7 @@ def parse(user_input, start_symbol, parsingTable):
             else:
                 stack.pop()
 
-    if acceptability_flag == 0:
+    if acc_flag == 0:
         print("String accepted!")
     else:
         print("String not accepted!")
