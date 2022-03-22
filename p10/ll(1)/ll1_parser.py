@@ -31,7 +31,7 @@ def parse(user_input, start_symbol, parsingTable):
                 break
 
             value = parsingTable[key]
-            if value != '@':
+            if value != 'ɛ':
                 value = value[::-1]
                 value = list(value)
 
@@ -54,7 +54,7 @@ def ll1(follow, productions):
     table = {}
     for key in productions:
         for value in productions[key]:
-            if value != '@':
+            if value != 'ɛ':
                 for element in first(value, productions):
                     table[key, element] = value
             else:
@@ -96,7 +96,7 @@ def follow(s, productions, ans):
                         ans[s] = ans[s].union(temp)
                 else:
                     first_of_next = first(value[f + 1:], productions)
-                    if '@' in first_of_next:
+                    if 'ɛ' in first_of_next:
                         if key != s:
                             if key in ans:
                                 temp = ans[key]
@@ -104,7 +104,7 @@ def follow(s, productions, ans):
                                 ans = follow(key, productions, ans)
                                 temp = ans[key]
                             ans[s] = ans[s].union(temp)
-                            ans[s] = ans[s].union(first_of_next) - {'@'}
+                            ans[s] = ans[s].union(first_of_next) - {'ɛ'}
                     else:
                         ans[s] = ans[s].union(first_of_next)
     return ans
@@ -115,11 +115,11 @@ def first(s, productions):
     ans = set()
     if c.isupper():
         for st in productions[c]:
-            if st == '@':
+            if st == 'ɛ':
                 if len(s) != 1:
                     ans = ans.union(first(s[1:], productions))
                 else:
-                    ans = ans.union('@')
+                    ans = ans.union('ɛ')
             else:
                 f = first(st, productions)
                 ans = ans.union(x for x in f)
