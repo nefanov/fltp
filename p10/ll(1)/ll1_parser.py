@@ -129,8 +129,9 @@ def first(s, productions):
 
 
 if __name__ == "__main__":
+    inp_g = sys.argv[1] if len(sys.argv)>1 else "grammar"
     productions = dict()
-    grammar = open("grammar", "r")
+    grammar = open(inp_g, "r")
     first_dict = dict()
     follow_dict = dict()
     flag = 1
@@ -149,10 +150,8 @@ if __name__ == "__main__":
         first_dict[lhs] = first(lhs, productions)
     for f in first_dict:
         print(str(f) + " : " + str(first_dict[f]))
-    print("")
-
+        
     print('\n========Follow========\n')
-
     for lhs in productions:
         follow_dict[lhs] = set()
 
@@ -168,6 +167,7 @@ if __name__ == "__main__":
         print(str(f) + " : " + str(follow_dict[f]))
 
     ll1Table = ll1(follow_dict, productions)
-
-    # parse("edcc", start, ll1Table)
+    print("===============TEST 1=================")
+    parse("edcc", start, ll1Table)
+    print("===============TEST 2=================")
     parse("aabd", start, ll1Table)
