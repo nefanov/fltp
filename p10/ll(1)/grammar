@@ -1,4 +1,4 @@
-S -> aA | bB | dC
+S -> aA | bB | dC | ɛ
 A -> aA | bA | d
 B -> bB | d
 C -> d
