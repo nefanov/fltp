@@ -1,29 +1,20 @@
 import re
-
 import pandas as pd
 
 
 def parse(user_input, start_symbol, parsingTable):
     flag = 0
-
     user_input = user_input + "$"
-
     stack = []
-
     stack.append("$")
     stack.append(start_symbol)
-
     input_len = len(user_input)
     index = 0
 
     while len(stack) > 0:
-
         top = stack[len(stack) - 1]
-
         print("Top =>", top)
-
         current_input = user_input[index]
-
         print("Current_Input => ", current_input)
 
         if top == current_input:
@@ -57,7 +48,7 @@ def parse(user_input, start_symbol, parsingTable):
 
 
 def ll1(follow, productions):
-    print("\nParsing Table\n")
+    print("\n========Parsing table content========\n")
 
     table = {}
     for key in productions:
@@ -152,14 +143,14 @@ if __name__ == "__main__":
             start = lhs
         productions[lhs] = rhs
 
-    print('\nFirst\n')
+    print('\n========First========\n')
     for lhs in productions:
         first_dict[lhs] = first(lhs, productions)
     for f in first_dict:
         print(str(f) + " : " + str(first_dict[f]))
     print("")
 
-    print('\nFollow\n')
+    print('\n========Follow========\n')
 
     for lhs in productions:
         follow_dict[lhs] = set()
