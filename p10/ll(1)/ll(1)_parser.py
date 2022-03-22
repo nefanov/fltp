@@ -41,9 +41,9 @@ def analyze(string, start, table):
             else:
                 stack.pop() # simply pop if 'ε'
                 
-       if accepted:
+      if accepted:
             print("String accepted")
-       else:
+      else:
             print("String not accepted")  
       
   return accepted
@@ -107,7 +107,3 @@ def preprocess(test_gram): # making parsing_table
 def parse(test_gram, string):
     start, pt = preprocess(test_gram)
     print(analyze(string, start, pt))
-  
-  
-  
-
