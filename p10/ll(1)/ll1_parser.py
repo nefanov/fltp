@@ -1,7 +1,6 @@
 import re
 import pandas as pd
 
-
 def parse(user_input, start_symbol, parsingTable):
     flag = 0
     user_input = user_input + "$"
