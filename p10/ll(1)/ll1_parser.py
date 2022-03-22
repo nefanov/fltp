@@ -1,5 +1,6 @@
 # Implementation example.
 # inspired from: https://github.com/hatamiarash7/LL1_Parser
+import sys
 import re
 import pandas as pd
 
