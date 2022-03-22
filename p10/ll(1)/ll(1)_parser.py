@@ -16,7 +16,7 @@ def analyze(string, start, table):
   while len(stack) > 0: # classical algorithm
       top = stack[-1]
       print("stack:", stack, "top:", top)
-      curr_string = input_string[idx] # position in the last of the string
+      curr_string = input_string[idx] # idx is position in the last of the string
       print(f"Current input => {curr_string}")
       if top == curr_string: # symbol on current position accepted -- go further
             stack.pop()
