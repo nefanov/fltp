@@ -5,7 +5,7 @@ import re
 import pandas as pd
 
 def parse(user_input, start_symbol, parsingTable):
-    flag = 0
+    no_acc_flag = False
     user_input = user_input + "$"
     stack = []
     stack.append("$")
@@ -27,7 +27,7 @@ def parse(user_input, start_symbol, parsingTable):
             print(key)
 
             if key not in parsingTable:
-                acc_flag = 1
+                no_acc_flag = True
                 break
 
             value = parsingTable[key]
@@ -42,7 +42,7 @@ def parse(user_input, start_symbol, parsingTable):
             else:
                 stack.pop()
 
-    if acc_flag == 0:
+    if no_acc_flag == False:
         print("String accepted!")
     else:
         print("String not accepted!")
