@@ -24,7 +24,7 @@ _Идея_: разрешим параллельно обрабатывать в�
 
 _Графоструктурированный стек_
 
-Добавим стек -- GSS [1,2] (Предложен Томитой для GLR [2], но идея обобщается на GLL).
+Добавим стек -- GSS [1-3] (Предложен Томитой для GLR [2], но идея обобщается на GLL).
 
 Детали реализации GSS:
 
@@ -64,3 +64,4 @@ _Дескриптор_ -- тройка (X, u , i), где X -- слот грам
 
 1) GSS: https://en.wikipedia.org/wiki/Graph-structured_stack
 2) Masaru Tomita. Graph-Structured Stack And Natural Language Parsing. Annual Meeting of the Association of Computational Linguistics, 1988.
+3) "Простейшая" реализация GSS https://www.tutorialspoint.com/cplusplus-program-to-implement-graph-structured-stack
