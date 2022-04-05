@@ -5,7 +5,7 @@
     
   (Проблема с неоднозначными -- хотим записать в одну ячейку несколько подходящих продукций)
     
-Реализуем нисходящий анализ для произвольных КС-языков
+Реализуем нисходящий анализ для произвольных КС-языков [4]
 
 _Принципы_:
 
@@ -65,3 +65,4 @@ _Дескриптор_ -- тройка (X, u , i), где X -- слот грам
 1) GSS: https://en.wikipedia.org/wiki/Graph-structured_stack
 2) Masaru Tomita. Graph-Structured Stack And Natural Language Parsing. Annual Meeting of the Association of Computational Linguistics, 1988.
 3) "Простейшая" реализация GSS https://www.tutorialspoint.com/cplusplus-program-to-implement-graph-structured-stack
+4) GLL: https://dotat.at/tmp/gll.pdf
