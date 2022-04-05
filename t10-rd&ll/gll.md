@@ -66,3 +66,4 @@ _Дескриптор_ -- тройка (X, u , i), где X -- слот грам
 2) Masaru Tomita. Graph-Structured Stack And Natural Language Parsing. Annual Meeting of the Association of Computational Linguistics, 1988.
 3) "Простейшая" реализация GSS https://www.tutorialspoint.com/cplusplus-program-to-implement-graph-structured-stack
 4) GLL: https://dotat.at/tmp/gll.pdf
+5) https://hackage.haskell.org/package/gll-0.4.0.3/docs/GLL-Parser.html
