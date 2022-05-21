@@ -1,1 +1,5 @@
-Алгоритм Бржозовского (In progress): https://github.com/vasdron/Final_project
+1. Алгоритм Бржозовского (In progress): https://github.com/vasdron/Final_project
+2. regexp2dfa:
+3. sql2cypher:
+4. pathfinder:
+5. 
