@@ -55,15 +55,13 @@ def CYK(inp="", G = None, log=True):
 
     for i in range(len(inp)):
         M[i+1][i] = inp[i]
-    if log==True:
-        logM(M, "initialized matrix:")
 
     for i in range(len(inp)):
         nonterm_list = search_lhs_terminal_rule(M[i+1][i])
         M[i][i] = nonterm_list
 
-    if log == True:
-        logM(M, "After 1st step:")
+    if log==True:
+        logM(M, "initialized matrix:")
 
     n = len(inp)
     # динамика для 2 шага и далее:
