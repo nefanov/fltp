@@ -1,3 +1,4 @@
+# Inspired from: https://github.com/Pranay2050/LL1_Parser
 from collections import OrderedDict
 
 def isterminal(char):
