@@ -1,5 +1,7 @@
-# fltp
+# FLTP
 Formal Languages Theory in Practice [MIPT Course]
+
+Кафедра Информатики и Вычислительной Математики МФТИ
 
 # Конспект лекций (обновляется непрерывно):
 
