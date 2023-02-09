@@ -1,6 +1,10 @@
 # fltp
 Formal Languages Theory in Practice [MIPT Course]
 
+# Конспект лекций (обновляется непрерывно):
+
+https://github.com/nefanov/fltp/blob/main/FLTP_lectures.pdf
+
 # Литература:
 
 1) Хопкрофт Д., Мотвани Р., Ульман Д. Введение в теорию автоматов, языков и вычислений. Санкт-Петербург : Вильямс, 2008.
